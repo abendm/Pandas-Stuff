@@ -1,0 +1,1095 @@
+
+
+	\documentclass[10pt,parskip=half,
+	toc=sectionentrywithdots,
+	bibliography=totocnumbered,
+	captions=tableheading,numbers=noendperiod]{scrartcl}
+
+    \usepackage[T1]{fontenc} % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+    \usepackage{graphicx}
+    \usepackage[skip=3pt]{caption}
+    \usepackage{adjustbox} % Used to constrain images to a maximum size
+    \usepackage[table]{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics
+                         % to support a larger range
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+
+    \usepackage{translations}
+	\usepackage{microtype} % improves the spacing between words and letters
+	\usepackage{placeins} % placement of figures
+    % could use \usepackage[section]{placeins} but placing in subsection in command section
+	% Places the float at precisely the location in the LaTeX code (with H)
+	\usepackage{float}
+	\usepackage[colorinlistoftodos,obeyFinal,textwidth=.8in]{todonotes} % to mark to-dos
+	% number figures, tables and equations by section
+	\usepackage{chngcntr}
+	% header/footer
+	\usepackage[footsepline=0.25pt]{scrlayer-scrpage}
+
+	% bibliography formatting
+	\usepackage[numbers, square, super, sort&compress]{natbib}
+	% hyperlink doi's
+	\usepackage{doi}
+
+    % define a code float
+    \usepackage{newfloat} % to define a new float types
+    \DeclareFloatingEnvironment[
+        fileext=frm,placement={!ht},
+        within=section,name=Code]{codecell}
+    \DeclareFloatingEnvironment[
+        fileext=frm,placement={!ht},
+        within=section,name=Text]{textcell}
+    \DeclareFloatingEnvironment[
+        fileext=frm,placement={!ht},
+        within=section,name=Text]{errorcell}
+
+    \usepackage{listings} % a package for wrapping code in a box
+    \usepackage[framemethod=tikz]{mdframed} % to fram code
+
+% Pygments definitions
+
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+% ANSI colors
+\definecolor{ansi-black}{HTML}{3E424D}
+\definecolor{ansi-black-intense}{HTML}{282C36}
+\definecolor{ansi-red}{HTML}{E75C58}
+\definecolor{ansi-red-intense}{HTML}{B22B31}
+\definecolor{ansi-green}{HTML}{00A250}
+\definecolor{ansi-green-intense}{HTML}{007427}
+\definecolor{ansi-yellow}{HTML}{DDB62B}
+\definecolor{ansi-yellow-intense}{HTML}{B27D12}
+\definecolor{ansi-blue}{HTML}{208FFB}
+\definecolor{ansi-blue-intense}{HTML}{0065CA}
+\definecolor{ansi-magenta}{HTML}{D160C4}
+\definecolor{ansi-magenta-intense}{HTML}{A03196}
+\definecolor{ansi-cyan}{HTML}{60C6C8}
+\definecolor{ansi-cyan-intense}{HTML}{258F8F}
+\definecolor{ansi-white}{HTML}{C5C1B4}
+\definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+% commands and environments needed by pandoc snippets
+% extracted from the output of `pandoc -s`
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+% Additional commands for more recent versions of Pandoc
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+
+% Define a nice break command that doesn't care if a line doesn't already
+% exist.
+\def\br{\hspace*{\fill} \\* }
+
+% Math Jax compatability definitions
+\def\gt{>}
+\def\lt{<}
+
+    \setcounter{secnumdepth}{5}
+
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+\DeclareTranslationFallback{Author}{Author}
+\DeclareTranslation{Portuges}{Author}{Autor}
+
+\DeclareTranslationFallback{List of Codes}{List of Codes}
+\DeclareTranslation{Catalan}{List of Codes}{Llista de Codis}
+\DeclareTranslation{Danish}{List of Codes}{Liste over Koder}
+\DeclareTranslation{German}{List of Codes}{Liste der Codes}
+\DeclareTranslation{Spanish}{List of Codes}{Lista de C\'{o}digos}
+\DeclareTranslation{French}{List of Codes}{Liste des Codes}
+\DeclareTranslation{Italian}{List of Codes}{Elenco dei Codici}
+\DeclareTranslation{Dutch}{List of Codes}{Lijst van Codes}
+\DeclareTranslation{Portuges}{List of Codes}{Lista de C\'{o}digos}
+
+\DeclareTranslationFallback{Supervisors}{Supervisors}
+\DeclareTranslation{Catalan}{Supervisors}{Supervisors}
+\DeclareTranslation{Danish}{Supervisors}{Vejledere}
+\DeclareTranslation{German}{Supervisors}{Vorgesetzten}
+\DeclareTranslation{Spanish}{Supervisors}{Supervisores}
+\DeclareTranslation{French}{Supervisors}{Superviseurs}
+\DeclareTranslation{Italian}{Supervisors}{Le autorit\`{a} di vigilanza}
+\DeclareTranslation{Dutch}{Supervisors}{supervisors}
+\DeclareTranslation{Portuguese}{Supervisors}{Supervisores}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,
+    keepspaces=true,
+    numbers=left,
+    numbersep=10pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    breaklines=true,
+    literate={\-}{}{0\discretionary{-}{}{-}},
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\lstset{style=mystyle}
+
+\surroundwithmdframed[
+  hidealllines=true,
+  backgroundcolor=backcolour,
+  innerleftmargin=0pt,
+  innerrightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt]{lstlisting}
+
+ % Used to adjust the document margins
+\usepackage{geometry}
+\geometry{tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,
+nohead,includefoot,footskip=25pt}
+% you can use showframe option to check the margins visually
+
+	% ensure new section starts on new page
+	\addtokomafont{section}{\clearpage}
+
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy
+
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+
+    % ensure figures are placed within subsections
+    \makeatletter
+    \AtBeginDocument{%
+      \expandafter\renewcommand\expandafter\subsection\expandafter
+        {\expandafter\@fb@secFB\subsection}%
+      \newcommand\@fb@secFB{\FloatBarrier
+        \gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
+      \g@addto@macro\@afterheading{\@fb@afterHHook}%
+      \gdef\@fb@afterHHook{}%
+    }
+    \makeatother
+
+	% number figures, tables and equations by section
+	\usepackage{chngcntr}
+	\counterwithout{figure}{section}
+	\counterwithout{table}{section}
+	\counterwithout{equation}{section}
+	\makeatletter
+	\@addtoreset{table}{section}
+	\@addtoreset{figure}{section}
+	\@addtoreset{equation}{section}
+	\makeatother
+	\renewcommand\thetable{\thesection.\arabic{table}}
+	\renewcommand\thefigure{\thesection.\arabic{figure}}
+	\renewcommand\theequation{\thesection.\arabic{equation}}
+
+        % set global options for float placement
+        \makeatletter
+          \providecommand*\setfloatlocations[2]{\@namedef{fps@#1}{#2}}
+        \makeatother
+
+    % align captions to left (indented)
+	\captionsetup{justification=raggedright,
+	singlelinecheck=false,format=hang,labelfont={it,bf}}
+
+	% shift footer down so space between separation line
+	\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.odd}
+	\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.even}
+	\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.oneside}
+	\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.odd}
+	\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.even}
+	\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.oneside}
+	\pagestyle{scrheadings}
+	\clearscrheadfoot{}
+	\ifoot{\leftmark}
+	\renewcommand{\sectionmark}[1]{\markleft{\thesection\ #1}}
+	\ofoot{\pagemark}
+	\cfoot{}
+
+% clereref must be loaded after anything that changes the referencing system
+\usepackage{cleveref}
+\creflabelformat{equation}{#2#1#3}
+
+% make the code float work with cleverref
+\crefname{codecell}{code}{codes}
+\Crefname{codecell}{code}{codes}
+% make the text float work with cleverref
+\crefname{textcell}{text}{texts}
+\Crefname{textcell}{text}{texts}
+% make the text float work with cleverref
+\crefname{errorcell}{error}{errors}
+\Crefname{errorcell}{error}{errors}
+
+	\begin{document}
+
+		\title{Notebook}
+	\date{\today}
+	\maketitle
+
+		\begingroup
+    \let\cleardoublepage\relax
+    \let\clearpage\relax\tableofcontents\listoffigures\listoftables\listof{codecell}{\GetTranslation{List of Codes}}
+    \endgroup
+
+\subsubsection{NLP Refresher}\label{nlp-refresher}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+text = ["System of the World. By Isaac Newton", "   Snow Crash  .  By Neal Stephenson ",
+       " AFROFUTURISM. by     Ytasha L. Womack "]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+strip_whitespace = [string.strip() for string in text]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+strip_whitespace
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['System of the World. By Isaac Newton',
+ 'Snow Crash  .  By Neal Stephenson',
+ 'AFROFUTURISM. by     Ytasha L. Womack']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+strip_whitespace2 = [string.strip() for string in strip_whitespace]
+strip_whitespace2
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['System of the World. By Isaac Newton',
+ 'Snow Crash  .  By Neal Stephenson',
+ 'AFROFUTURISM. by     Ytasha L. Womack']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+remove_periods = [string.replace(".","") for string in strip_whitespace]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+remove_periods
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['System of the World By Isaac Newton',
+ 'Snow Crash    By Neal Stephenson',
+ 'AFROFUTURISM by     Ytasha L Womack']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+upper = [string.upper() for string in strip_whitespace]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+upper
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['SYSTEM OF THE WORLD. BY ISAAC NEWTON',
+ 'SNOW CRASH  .  BY NEAL STEPHENSON',
+ 'AFROFUTURISM. BY     YTASHA L. WOMACK']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+import re
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+xs = [re.sub(r"[a-zA-Z]", "X", string) for string in strip_whitespace]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+xs
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['XXXXXX XX XXX XXXXX. XX XXXXX XXXXXX',
+ 'XXXX XXXXX  .  XX XXXX XXXXXXXXXX',
+ 'XXXXXXXXXXXX. XX     XXXXXX X. XXXXXX']
+\end{lstlisting}
+
+\textbf{REGEX TUTORIAL}
+
+https://www.analyticsvidhya.com/blog/2015/06/regular-expression-python/
+
+\subsubsection{Scraping}\label{scraping}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+import requests
+from bs4 import BeautifulSoup
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+url = 'https://www.analyticsvidhya.com/blog/2015/06/regular-expression-python/'
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+req = requests.get(url)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+req
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+<Response [200]>
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+soup = BeautifulSoup(req.text, 'html.parser')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+soup.text[40:50]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+'lar Expres'
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+soup.find('h2')
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+<h2 class="site-outline">Learn everything about Analytics</h2>
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+heads = soup.find_all('h2')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+len(heads)
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+6
+\end{lstlisting}
+
+\subsubsection{Basic NLP}\label{basic-nlp}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from nltk.tokenize import word_tokenize
+import nltk
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+nltk.download('punkt')
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,belowskip=5pt,aboveskip=5pt,breakindent=0pt]
+[nltk_data] Downloading package punkt to /Users/NYCMath/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+True
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+pgraph = soup.find('p').text
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tokes = word_tokenize(pgraph)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tokes
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['In',
+ 'last',
+ 'few',
+ 'years',
+ ',',
+ 'there',
+ 'has',
+ 'been',
+ 'a',
+ 'dramatic',
+ 'shift',
+ 'in',
+ 'usage',
+ 'of',
+ 'general',
+ 'purpose',
+ 'programming',
+ 'languages',
+ 'for',
+ 'data',
+ 'science',
+ 'and',
+ 'machine',
+ 'learning',
+ '.',
+ 'This',
+ 'was',
+ 'not',
+ 'always',
+ 'the',
+ 'case',
+ '–',
+ 'a',
+ 'decade',
+ 'back',
+ 'this',
+ 'thought',
+ 'would',
+ 'have',
+ 'met',
+ 'a',
+ 'lot',
+ 'of',
+ 'skeptic',
+ 'eyes',
+ '!']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+sy = ['.', ',', '!', '-', '?','*', '–']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+for word in tokes:
+    if word not in sy:
+        print(word)
+    else:
+        _
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,belowskip=5pt,aboveskip=5pt,breakindent=0pt]
+In
+last
+few
+years
+there
+has
+been
+a
+dramatic
+shift
+in
+usage
+of
+general
+purpose
+programming
+languages
+for
+data
+science
+and
+machine
+learning
+This
+was
+not
+always
+the
+case
+a
+decade
+back
+this
+thought
+would
+have
+met
+a
+lot
+of
+skeptic
+eyes
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from nltk.tokenize import sent_tokenize
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+sent_tokenize(pgraph)[0]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+'In last few years, there has been a dramatic shift in usage of general purpose programming languages for data science and machine learning.'
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from nltk.corpus import stopwords
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+stop_words = stopwords.words('english')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+stop_words[:6]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['i', 'me', 'my', 'myself', 'we', 'our']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+[word for word in tokes if word not in stop_words]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['In',
+ 'last',
+ 'years',
+ ',',
+ 'dramatic',
+ 'shift',
+ 'usage',
+ 'general',
+ 'purpose',
+ 'programming',
+ 'languages',
+ 'data',
+ 'science',
+ 'machine',
+ 'learning',
+ '.',
+ 'This',
+ 'always',
+ 'case',
+ '–',
+ 'decade',
+ 'back',
+ 'thought',
+ 'would',
+ 'met',
+ 'lot',
+ 'skeptic',
+ 'eyes',
+ '!']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+stop_words[:10]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', "you're"]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+#stemming
+from nltk.stem.porter import PorterStemmer
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+porter = PorterStemmer()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+[porter.stem(word) for word in tokes]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['In',
+ 'last',
+ 'few',
+ 'year',
+ ',',
+ 'there',
+ 'ha',
+ 'been',
+ 'a',
+ 'dramat',
+ 'shift',
+ 'in',
+ 'usag',
+ 'of',
+ 'gener',
+ 'purpos',
+ 'program',
+ 'languag',
+ 'for',
+ 'data',
+ 'scienc',
+ 'and',
+ 'machin',
+ 'learn',
+ '.',
+ 'thi',
+ 'wa',
+ 'not',
+ 'alway',
+ 'the',
+ 'case',
+ '–',
+ 'a',
+ 'decad',
+ 'back',
+ 'thi',
+ 'thought',
+ 'would',
+ 'have',
+ 'met',
+ 'a',
+ 'lot',
+ 'of',
+ 'skeptic',
+ 'eye',
+ '!']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from nltk import pos_tag
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+text_tagged = pos_tag(tokes)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+text_tagged
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+[('In', 'IN'),
+ ('last', 'JJ'),
+ ('few', 'JJ'),
+ ('years', 'NNS'),
+ (',', ','),
+ ('there', 'EX'),
+ ('has', 'VBZ'),
+ ('been', 'VBN'),
+ ('a', 'DT'),
+ ('dramatic', 'JJ'),
+ ('shift', 'NN'),
+ ('in', 'IN'),
+ ('usage', 'NN'),
+ ('of', 'IN'),
+ ('general', 'JJ'),
+ ('purpose', 'NN'),
+ ('programming', 'NN'),
+ ('languages', 'NNS'),
+ ('for', 'IN'),
+ ('data', 'NNS'),
+ ('science', 'NN'),
+ ('and', 'CC'),
+ ('machine', 'NN'),
+ ('learning', 'NN'),
+ ('.', '.'),
+ ('This', 'DT'),
+ ('was', 'VBD'),
+ ('not', 'RB'),
+ ('always', 'RB'),
+ ('the', 'DT'),
+ ('case', 'NN'),
+ ('–', 'VBZ'),
+ ('a', 'DT'),
+ ('decade', 'NN'),
+ ('back', 'RB'),
+ ('this', 'DT'),
+ ('thought', 'NN'),
+ ('would', 'MD'),
+ ('have', 'VB'),
+ ('met', 'VBN'),
+ ('a', 'DT'),
+ ('lot', 'NN'),
+ ('of', 'IN'),
+ ('skeptic', 'JJ'),
+ ('eyes', 'NNS'),
+ ('!', '.')]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+[word for word, tag in text_tagged if tag in ['NN', 'NNS']]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['years',
+ 'shift',
+ 'usage',
+ 'purpose',
+ 'programming',
+ 'languages',
+ 'data',
+ 'science',
+ 'machine',
+ 'learning',
+ 'case',
+ 'decade',
+ 'thought',
+ 'lot',
+ 'eyes']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tweets = ["we are more worried about what we can lose than what we feel",
+         "it's really cool to say I hate you. But it's not cool to say I love you. Love has a stigma",
+         "Instead of doing what you feel you just do what other people think you should do"]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tagged_tweets = []
+for tweet in tweets:
+    tweet_tag = pos_tag(word_tokenize(tweet))
+    tagged_tweets.append([tag for word, tag in tweet_tag])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tagged_tweets[2][:5]
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['RB', 'IN', 'VBG', 'WP', 'PRP']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from sklearn.preprocessing import MultiLabelBinarizer
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+one_hot_multi = MultiLabelBinarizer()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+one_hot_multi.fit_transform(tagged_tweets)
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+array([[0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+       [1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
+       [0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1]])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+one_hot_multi.classes_
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+array(['.', 'CC', 'DT', 'IN', 'JJ', 'MD', 'NN', 'NNS', 'PRP', 'RB', 'RBR',
+       'TO', 'VB', 'VBG', 'VBP', 'VBZ', 'WP'], dtype=object)
+\end{lstlisting}
+
+\subsubsection{CountVectorizer}\label{countvectorizer}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+import numpy as np
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from sklearn.feature_extraction.text import CountVectorizer
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+text_data = np.array(['I like Cardi B. ', 'Tribeca is a strange place.', ' Germany is where they make volkswagen cars.'])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+count = CountVectorizer()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+bag_of_words = count.fit_transform(text_data)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+count.get_feature_names()
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['cardi',
+ 'cars',
+ 'germany',
+ 'is',
+ 'like',
+ 'make',
+ 'place',
+ 'strange',
+ 'they',
+ 'tribeca',
+ 'volkswagen',
+ 'where']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+bag_of_words
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+<3x12 sparse matrix of type '<class 'numpy.int64'>'
+	with 13 stored elements in Compressed Sparse Row format>
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+bag_of_words.toarray()
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+array([[1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0],
+       [0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1]], dtype=int64)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+count.get_feature_names()
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+['cardi',
+ 'cars',
+ 'germany',
+ 'is',
+ 'like',
+ 'make',
+ 'place',
+ 'strange',
+ 'they',
+ 'tribeca',
+ 'volkswagen',
+ 'where']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+count_2gram = CountVectorizer(ngram_range = (1, 2), stop_words="english", 
+                             vocabulary=['cardi'])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+bag = count_2gram.fit_transform(text_data)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+bag.toarray()
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+array([[1],
+       [0],
+       [0]])
+\end{lstlisting}
+
+\subsubsection{Tfidf}\label{tfidf}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+from sklearn.feature_extraction.text import TfidfVectorizer
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tfidf = TfidfVectorizer()
+feature_matrix = tfidf.fit_transform(text_data)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+feature_matrix
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+<3x12 sparse matrix of type '<class 'numpy.float64'>'
+	with 13 stored elements in Compressed Sparse Row format>
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+feature_matrix.toarray()
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+array([[0.70710678, 0.        , 0.        , 0.        , 0.70710678,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        ],
+       [0.        , 0.        , 0.        , 0.40204024, 0.        ,
+        0.        , 0.52863461, 0.52863461, 0.        , 0.52863461,
+        0.        , 0.        ],
+       [0.        , 0.38988801, 0.38988801, 0.29651988, 0.        ,
+        0.38988801, 0.        , 0.        , 0.38988801, 0.        ,
+        0.38988801, 0.38988801]])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,numbers=left,xleftmargin=20pt,xrightmargin=5pt,belowskip=5pt,aboveskip=5pt]
+tfidf.vocabulary_
+\end{lstlisting}
+
+\begin{lstlisting}[language={},postbreak={},numbers=none,xrightmargin=7pt,breakindent=0pt,aboveskip=5pt,belowskip=5pt]
+{'cardi': 0,
+ 'cars': 1,
+ 'germany': 2,
+ 'is': 3,
+ 'like': 4,
+ 'make': 5,
+ 'place': 6,
+ 'strange': 7,
+ 'they': 8,
+ 'tribeca': 9,
+ 'volkswagen': 10,
+ 'where': 11}
+\end{lstlisting}
+
+	\end{document}
+

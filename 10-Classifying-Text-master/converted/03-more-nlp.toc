@@ -1,0 +1,5 @@
+\contentsline {subsubsection}{\numberline {0.0.1}NLP Refresher}{1}{subsubsection.0.0.1}
+\contentsline {subsubsection}{\numberline {0.0.2}Scraping}{2}{subsubsection.0.0.2}
+\contentsline {subsubsection}{\numberline {0.0.3}Basic NLP}{3}{subsubsection.0.0.3}
+\contentsline {subsubsection}{\numberline {0.0.4}CountVectorizer}{9}{subsubsection.0.0.4}
+\contentsline {subsubsection}{\numberline {0.0.5}Tfidf}{10}{subsubsection.0.0.5}

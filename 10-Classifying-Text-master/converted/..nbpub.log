@@ -1,0 +1,77 @@
+INFO:main:started ipypublish v0.6.7 at Wed Aug  1 23:33:57 2018
+INFO:main:logging to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/.nbpub.log
+INFO:main:running for ipynb(s) at: .
+INFO:main:with conversion: latex_ipypublish_main
+INFO:nbmerge:Merging all notebooks in directory
+INFO:main:getting output format from exporter plugin
+INFO:nbexport:running nbconvert
+INFO:split_outputs:splitting outputs into separate cells
+INFO:latex_doc_links:resolving external file paths in ipub metadata to: 01-donors_choose.ipynb
+INFO:latex_doc_captions:extracting caption cells
+INFO:main:outputting converted file to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/.tex
+INFO:main:dumping external files to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/_files
+INFO:main:running pdf conversion
+INFO:pdfexport:running: latexmk -xelatex -bibtex -pdf --interaction=batchmode <outpath>
+INFO:pdfexport:latexmk: Latexmk: This is Latexmk, John Collins, 22 April 2016, version: 4.45.
+INFO:pdfexport:latexmk: Rule 'pdflatex': Rules & subrules not known to be previously run:
+INFO:pdfexport:latexmk: pdflatex
+INFO:pdfexport:latexmk: Rule 'pdflatex': The following rules & subrules became out-of-date:
+INFO:pdfexport:latexmk: 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 1 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  --interaction=batchmode -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: Latexmk: References changed.
+INFO:pdfexport:latexmk: Latexmk: References changed.
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '.pdf'
+INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
+INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
+INFO:pdfexport:latexmk: '.aux'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 2 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  --interaction=batchmode -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '.pdf'
+INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
+INFO:pdfexport:latexmk: Label `problem' multiply defined
+INFO:pdfexport:latexmk: Label `problem@cref' multiply defined
+INFO:pdfexport:latexmk: Label `yelp' multiply defined
+INFO:pdfexport:latexmk: Label `yelp@cref' multiply defined
+INFO:pdfexport:latexmk: Latexmk: Summary of warnings:
+INFO:pdfexport:latexmk: Latex found 4 multiply defined reference(s)
+INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
+INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
+INFO:pdfexport:latexmk: '.out'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 3 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  --interaction=batchmode -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '.pdf'
+INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
+INFO:pdfexport:latexmk: Label `problem' multiply defined
+INFO:pdfexport:latexmk: Label `problem@cref' multiply defined
+INFO:pdfexport:latexmk: Label `yelp' multiply defined
+INFO:pdfexport:latexmk: Label `yelp@cref' multiply defined
+INFO:pdfexport:latexmk: Latexmk: Summary of warnings:
+INFO:pdfexport:latexmk: Latex found 4 multiply defined reference(s)
+INFO:pdfexport:latexmk: Latexmk: All targets (.pdf) are up-to-date
+INFO:pdfexport:pdf conversion complete
+INFO:main:process finished successfully

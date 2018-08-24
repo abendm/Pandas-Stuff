@@ -1,0 +1,1143 @@
+INFO:main:started ipypublish v0.6.7 at Wed Aug  1 23:43:49 2018
+INFO:main:logging to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.nbpub.log
+INFO:main:running for ipynb(s) at: 02-Working-with-Text.ipynb
+INFO:main:with conversion: latex_ipypublish_all
+INFO:nbmerge:Reading notebook
+INFO:main:getting output format from exporter plugin
+INFO:nbexport:running nbconvert
+INFO:latex_doc_defaults:adding ipub defaults to notebook
+INFO:split_outputs:splitting outputs into separate cells
+INFO:latex_doc_links:resolving external file paths in ipub metadata to: 02-Working-with-Text.ipynb
+INFO:latex_doc_captions:extracting caption cells
+INFO:main:outputting converted file to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.tex
+INFO:main:dumping external files to: /Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text_files
+INFO:main:running pdf conversion
+INFO:pdfexport:running: latexmk -xelatex -bibtex -pdf <outpath>
+INFO:pdfexport:latexmk: Latexmk: This is Latexmk, John Collins, 22 April 2016, version: 4.45.
+INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
+INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
+INFO:pdfexport:latexmk: '/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.tex'
+INFO:pdfexport:latexmk: '02-Working-with-Text.tex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 1 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text
+INFO:pdfexport:latexmk: .tex
+INFO:pdfexport:latexmk: LaTeX2e <2016/03/31>
+INFO:pdfexport:latexmk: Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrartcl.cls
+INFO:pdfexport:latexmk: Document Class: scrartcl 2016/05/10 v3.20 KOMA-Script document class (article)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrkbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlfile.sty
+INFO:pdfexport:latexmk: Package scrlfile, 2016/05/10 v3.20 KOMA-Script package (loading files)
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ))) (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrsize10pt.clo)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/typearea.sty
+INFO:pdfexport:latexmk: Package typearea, 2016/05/10 v3.20 KOMA-Script package (type area)
+INFO:pdfexport:latexmk: Copyright (C) Frank Neukam, 1992-1994
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm, 1994-
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/mathpazo.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/xelatex/xetex-def/xetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/trimclip.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/collectbox/collectbox.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/tc-xetex.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/enumerate.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+INFO:pdfexport:latexmk: For additional information on amsmath, use the `?' option.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/eurosym/eurosym.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package inputenc Warning: inputenc package ignored with utf8 based engines.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INFO:pdfexport:latexmk: Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
+INFO:pdfexport:latexmk: <2008/02/07> (tvz))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grffile.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty))
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Message: Driver (autodetected): hxetex.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hxetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/puenc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cnltx/cnltx-base.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+INFO:pdfexport:latexmk: ode.tex)))) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/trimspaces/trimspaces.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/todonotes/todonotes.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+INFO:pdfexport:latexmk: x
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+INFO:pdfexport:latexmk: sts.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+INFO:pdfexport:latexmk: f
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+INFO:pdfexport:latexmk: .def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+INFO:pdfexport:latexmk: df.def))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+INFO:pdfexport:latexmk: tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+INFO:pdfexport:latexmk: nometric.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+INFO:pdfexport:latexmk: m.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+INFO:pdfexport:latexmk: rison.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+INFO:pdfexport:latexmk: erarithmetics.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+INFO:pdfexport:latexmk: ruct.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+INFO:pdfexport:latexmk: ate.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+INFO:pdfexport:latexmk: ations.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+INFO:pdfexport:latexmk: ode.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+INFO:pdfexport:latexmk: ssing.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+INFO:pdfexport:latexmk: ncy.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+INFO:pdfexport:latexmk: code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+INFO:pdfexport:latexmk: tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -0-65.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -1-18.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+INFO:pdfexport:latexmk: dlers.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarytopaths.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarypositioning.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/doi/doi.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/mdframed.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-base.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/needspace/needspace.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/md-frame-1.mdf))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty)
+INFO:pdfexport:latexmk: (./02-Working-with-Text.aux
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem@cref' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+INFO:pdfexport:latexmk: (./02-Working-with-Text.out) (./02-Working-with-Text.out)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations-basic-d
+INFO:pdfexport:latexmk: ictionary-english.trsl)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-ppl.cfg)
+INFO:pdfexport:latexmk: ABD: EveryShipout initializing macros
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: Very small head height detected!
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                Using scrlayer-scrpage the head height
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                should be at least \baselineskip, which is
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                12.0pt currently.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                But head height is currently 0.0pt only.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                You may use
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                geometry option `head=12.0pt'
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                to avoid this warning.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: *geometry* driver: auto-detecting
+INFO:pdfexport:latexmk: *geometry* detected driver: xetex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omszplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1zplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: No \author given.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: No file 02-Working-with-Text.toc.
+INFO:pdfexport:latexmk: No file 02-Working-with-Text.lof.
+INFO:pdfexport:latexmk: No file 02-Working-with-Text.lot.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Class scrartcl Warning: \float@listhead detected!
+INFO:pdfexport:latexmk: (scrartcl)              Implementation of \float@listhead became
+INFO:pdfexport:latexmk: (scrartcl)              deprecated in KOMA-Script v3.01 2008/11/14 and
+INFO:pdfexport:latexmk: (scrartcl)              has been replaced by several more flexible
+INFO:pdfexport:latexmk: (scrartcl)              features of package `tocbasic`.
+INFO:pdfexport:latexmk: (scrartcl)              Maybe implementation of \float@listhead will
+INFO:pdfexport:latexmk: (scrartcl)              be removed from KOMA-Script soon.
+INFO:pdfexport:latexmk: (scrartcl)              Loading of package `scrhack' may help to
+INFO:pdfexport:latexmk: (scrartcl)              avoid this warning, if you are using a
+INFO:pdfexport:latexmk: (scrartcl)              a package that still implements the
+INFO:pdfexport:latexmk: (scrartcl)              deprecated \float@listhead interface  on input line 396
+INFO:pdfexport:latexmk: .
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: No file 02-Working-with-Text.frm.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: \headheight to low.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                At least 12.0pt needed,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                but only 0.0pt found.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll enlarge \headheight, for further
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                processing, but you should do this yourself,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                e.g., setting geometry's option
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                `head=12.0pt'.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
+INFO:pdfexport:latexmk: 00.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Overfull \vbox (12.0pt too high) has occurred while \output is active
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/se-ascii-print.def)
+INFO:pdfexport:latexmk: [1] (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmtt.fd) [2] [3]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Warning: Difference (2) between bookmark levels is greater
+INFO:pdfexport:latexmk: (hyperref)                than one, level fixed on input line 532.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ppl.fd) [4] [5]
+INFO:pdfexport:latexmk: [6] [7]
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 When building the vocabulary ignore terms that have a document
+INFO:pdfexport:latexmk: frequency strictly
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 lower than the given threshold. This value is also     called c
+INFO:pdfexport:latexmk: ut-off in the
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 literature.     If float, the parameter represents a proportion
+INFO:pdfexport:latexmk: of documents, integer
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last box will be empty
+INFO:pdfexport:latexmk: (mdframed)                you have to change it manually
+INFO:pdfexport:latexmk: (mdframed)                by changing the text, the space
+INFO:pdfexport:latexmk: (mdframed)                or something else on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [8]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last split box is empty
+INFO:pdfexport:latexmk: (mdframed)                You have to change the settings on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [9] [10] [11] [12] <use  "02-Working-with-Text_files/output_75_1.png" >
+INFO:pdfexport:latexmk: [13] (./02-Working-with-Text.aux)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: There were multiply-defined labels.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (see the transcript file for additional information)
+INFO:pdfexport:latexmk: Output written on 02-Working-with-Text.pdf (13 pages).
+INFO:pdfexport:latexmk: Transcript written on 02-Working-with-Text.log.
+INFO:pdfexport:latexmk: Latexmk: Missing input file: '02-Working-with-Text.toc' from line
+INFO:pdfexport:latexmk: 'No file 02-Working-with-Text.toc.'
+INFO:pdfexport:latexmk: Latexmk: Missing input file: '02-Working-with-Text.lof' from line
+INFO:pdfexport:latexmk: 'No file 02-Working-with-Text.lof.'
+INFO:pdfexport:latexmk: Latexmk: Missing input file: '02-Working-with-Text.lot' from line
+INFO:pdfexport:latexmk: 'No file 02-Working-with-Text.lot.'
+INFO:pdfexport:latexmk: Latexmk: Missing input file: '02-Working-with-Text.frm' from line
+INFO:pdfexport:latexmk: 'No file 02-Working-with-Text.frm.'
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '02-Working-with-Text.pdf'
+INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
+INFO:pdfexport:latexmk: Label `problem' multiply defined
+INFO:pdfexport:latexmk: Label `problem@cref' multiply defined
+INFO:pdfexport:latexmk: Latexmk: Summary of warnings:
+INFO:pdfexport:latexmk: Latex found 2 multiply defined reference(s)
+INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
+INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
+INFO:pdfexport:latexmk: '02-Working-with-Text.aux'
+INFO:pdfexport:latexmk: '02-Working-with-Text.frm'
+INFO:pdfexport:latexmk: '02-Working-with-Text.lof'
+INFO:pdfexport:latexmk: '02-Working-with-Text.lot'
+INFO:pdfexport:latexmk: '02-Working-with-Text.toc'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 2 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text
+INFO:pdfexport:latexmk: .tex
+INFO:pdfexport:latexmk: LaTeX2e <2016/03/31>
+INFO:pdfexport:latexmk: Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrartcl.cls
+INFO:pdfexport:latexmk: Document Class: scrartcl 2016/05/10 v3.20 KOMA-Script document class (article)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrkbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlfile.sty
+INFO:pdfexport:latexmk: Package scrlfile, 2016/05/10 v3.20 KOMA-Script package (loading files)
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ))) (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrsize10pt.clo)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/typearea.sty
+INFO:pdfexport:latexmk: Package typearea, 2016/05/10 v3.20 KOMA-Script package (type area)
+INFO:pdfexport:latexmk: Copyright (C) Frank Neukam, 1992-1994
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm, 1994-
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/mathpazo.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/xelatex/xetex-def/xetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/trimclip.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/collectbox/collectbox.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/tc-xetex.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/enumerate.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+INFO:pdfexport:latexmk: For additional information on amsmath, use the `?' option.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/eurosym/eurosym.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package inputenc Warning: inputenc package ignored with utf8 based engines.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INFO:pdfexport:latexmk: Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
+INFO:pdfexport:latexmk: <2008/02/07> (tvz))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grffile.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty))
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Message: Driver (autodetected): hxetex.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hxetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/puenc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cnltx/cnltx-base.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+INFO:pdfexport:latexmk: ode.tex)))) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/trimspaces/trimspaces.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/todonotes/todonotes.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+INFO:pdfexport:latexmk: x
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+INFO:pdfexport:latexmk: sts.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+INFO:pdfexport:latexmk: f
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+INFO:pdfexport:latexmk: .def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+INFO:pdfexport:latexmk: df.def))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+INFO:pdfexport:latexmk: tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+INFO:pdfexport:latexmk: nometric.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+INFO:pdfexport:latexmk: m.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+INFO:pdfexport:latexmk: rison.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+INFO:pdfexport:latexmk: erarithmetics.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+INFO:pdfexport:latexmk: ruct.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+INFO:pdfexport:latexmk: ate.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+INFO:pdfexport:latexmk: ations.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+INFO:pdfexport:latexmk: ode.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+INFO:pdfexport:latexmk: ssing.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+INFO:pdfexport:latexmk: ncy.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+INFO:pdfexport:latexmk: code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+INFO:pdfexport:latexmk: tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -0-65.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -1-18.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+INFO:pdfexport:latexmk: dlers.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarytopaths.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarypositioning.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/doi/doi.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/mdframed.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-base.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/needspace/needspace.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/md-frame-1.mdf))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty)
+INFO:pdfexport:latexmk: (./02-Working-with-Text.aux
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem@cref' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+INFO:pdfexport:latexmk: (./02-Working-with-Text.out) (./02-Working-with-Text.out)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations-basic-d
+INFO:pdfexport:latexmk: ictionary-english.trsl)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-ppl.cfg)
+INFO:pdfexport:latexmk: ABD: EveryShipout initializing macros
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: Very small head height detected!
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                Using scrlayer-scrpage the head height
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                should be at least \baselineskip, which is
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                12.0pt currently.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                But head height is currently 0.0pt only.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                You may use
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                geometry option `head=12.0pt'
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                to avoid this warning.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: *geometry* driver: auto-detecting
+INFO:pdfexport:latexmk: *geometry* detected driver: xetex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omszplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1zplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: No \author given.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (./02-Working-with-Text.toc
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd))
+INFO:pdfexport:latexmk: (./02-Working-with-Text.lof) (./02-Working-with-Text.lot)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Class scrartcl Warning: \float@listhead detected!
+INFO:pdfexport:latexmk: (scrartcl)              Implementation of \float@listhead became
+INFO:pdfexport:latexmk: (scrartcl)              deprecated in KOMA-Script v3.01 2008/11/14 and
+INFO:pdfexport:latexmk: (scrartcl)              has been replaced by several more flexible
+INFO:pdfexport:latexmk: (scrartcl)              features of package `tocbasic`.
+INFO:pdfexport:latexmk: (scrartcl)              Maybe implementation of \float@listhead will
+INFO:pdfexport:latexmk: (scrartcl)              be removed from KOMA-Script soon.
+INFO:pdfexport:latexmk: (scrartcl)              Loading of package `scrhack' may help to
+INFO:pdfexport:latexmk: (scrartcl)              avoid this warning, if you are using a
+INFO:pdfexport:latexmk: (scrartcl)              a package that still implements the
+INFO:pdfexport:latexmk: (scrartcl)              deprecated \float@listhead interface  on input line 396
+INFO:pdfexport:latexmk: .
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (./02-Working-with-Text.frm)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: \headheight to low.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                At least 12.0pt needed,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                but only 0.0pt found.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll enlarge \headheight, for further
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                processing, but you should do this yourself,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                e.g., setting geometry's option
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                `head=12.0pt'.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
+INFO:pdfexport:latexmk: 00.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Overfull \vbox (12.0pt too high) has occurred while \output is active
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/se-ascii-print.def)
+INFO:pdfexport:latexmk: [1] (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmtt.fd) [2] [3]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Warning: Difference (2) between bookmark levels is greater
+INFO:pdfexport:latexmk: (hyperref)                than one, level fixed on input line 532.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ppl.fd) [4] [5]
+INFO:pdfexport:latexmk: [6] [7]
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 When building the vocabulary ignore terms that have a document
+INFO:pdfexport:latexmk: frequency strictly
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 lower than the given threshold. This value is also     called c
+INFO:pdfexport:latexmk: ut-off in the
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 literature.     If float, the parameter represents a proportion
+INFO:pdfexport:latexmk: of documents, integer
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last box will be empty
+INFO:pdfexport:latexmk: (mdframed)                you have to change it manually
+INFO:pdfexport:latexmk: (mdframed)                by changing the text, the space
+INFO:pdfexport:latexmk: (mdframed)                or something else on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [8]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last split box is empty
+INFO:pdfexport:latexmk: (mdframed)                You have to change the settings on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [9] [10] [11] [12] <use  "02-Working-with-Text_files/output_75_1.png" >
+INFO:pdfexport:latexmk: [13] (./02-Working-with-Text.aux)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: There were multiply-defined labels.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (see the transcript file for additional information)
+INFO:pdfexport:latexmk: Output written on 02-Working-with-Text.pdf (13 pages).
+INFO:pdfexport:latexmk: Transcript written on 02-Working-with-Text.log.
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '02-Working-with-Text.pdf'
+INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
+INFO:pdfexport:latexmk: Label `problem' multiply defined
+INFO:pdfexport:latexmk: Label `problem@cref' multiply defined
+INFO:pdfexport:latexmk: Latexmk: Summary of warnings:
+INFO:pdfexport:latexmk: Latex found 2 multiply defined reference(s)
+INFO:pdfexport:latexmk: Rule 'pdflatex': File changes, etc:
+INFO:pdfexport:latexmk: Changed files, or newly in use since previous run(s):
+INFO:pdfexport:latexmk: '02-Working-with-Text.aux'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Run number 3 of rule 'pdflatex'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Running 'xelatex  -recorder  "/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text.tex"'
+INFO:pdfexport:latexmk: ------------
+INFO:pdfexport:latexmk: Latexmk: applying rule 'pdflatex'...
+INFO:pdfexport:latexmk: This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex)
+INFO:pdfexport:latexmk: restricted \write18 enabled.
+INFO:pdfexport:latexmk: entering extended mode
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/Users/NYCMath/Desktop/GA_7-17/10-Intro-to-Text/converted/02-Working-with-Text
+INFO:pdfexport:latexmk: .tex
+INFO:pdfexport:latexmk: LaTeX2e <2016/03/31>
+INFO:pdfexport:latexmk: Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrartcl.cls
+INFO:pdfexport:latexmk: Document Class: scrartcl 2016/05/10 v3.20 KOMA-Script document class (article)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrkbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrbase.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlfile.sty
+INFO:pdfexport:latexmk: Package scrlfile, 2016/05/10 v3.20 KOMA-Script package (loading files)
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ))) (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrsize10pt.clo)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/typearea.sty
+INFO:pdfexport:latexmk: Package typearea, 2016/05/10 v3.20 KOMA-Script package (type area)
+INFO:pdfexport:latexmk: Copyright (C) Frank Neukam, 1992-1994
+INFO:pdfexport:latexmk: Copyright (C) Markus Kohm, 1994-
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/mathpazo.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/xelatex/xetex-def/xetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/trimclip.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/collectbox/collectbox.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/tc-xetex.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/enumerate.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+INFO:pdfexport:latexmk: For additional information on amsmath, use the `?' option.
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/eurosym/eurosym.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package inputenc Warning: inputenc package ignored with utf8 based engines.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INFO:pdfexport:latexmk: Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
+INFO:pdfexport:latexmk: <2008/02/07> (tvz))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grffile.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty))
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Message: Driver (autodetected): hxetex.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hxetex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/puenc.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cnltx/cnltx-base.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+INFO:pdfexport:latexmk: ode.tex)))) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/trimspaces/trimspaces.sty)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/todonotes/todonotes.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+INFO:pdfexport:latexmk: x
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+INFO:pdfexport:latexmk: sts.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+INFO:pdfexport:latexmk: f
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+INFO:pdfexport:latexmk: .def
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+INFO:pdfexport:latexmk: df.def))))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+INFO:pdfexport:latexmk: tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+INFO:pdfexport:latexmk: nometric.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+INFO:pdfexport:latexmk: m.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+INFO:pdfexport:latexmk: rison.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+INFO:pdfexport:latexmk: code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+INFO:pdfexport:latexmk: erarithmetics.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+INFO:pdfexport:latexmk: ruct.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+INFO:pdfexport:latexmk: .code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+INFO:pdfexport:latexmk: ate.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+INFO:pdfexport:latexmk: ations.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+INFO:pdfexport:latexmk: ode.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+INFO:pdfexport:latexmk: ssing.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+INFO:pdfexport:latexmk: code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+INFO:pdfexport:latexmk: de.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+INFO:pdfexport:latexmk: ncy.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+INFO:pdfexport:latexmk: code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+INFO:pdfexport:latexmk: tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -0-65.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+INFO:pdfexport:latexmk: -1-18.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+INFO:pdfexport:latexmk: e.tex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+INFO:pdfexport:latexmk: dlers.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+INFO:pdfexport:latexmk: e.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarytopaths.code.tex)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+INFO:pdfexport:latexmk: s/tikzlibrarypositioning.code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/scrlayer.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/doi/doi.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/mdframed.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def)))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-base.sty))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/needspace/needspace.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/mdframed/md-frame-1.mdf))
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty)
+INFO:pdfexport:latexmk: (./02-Working-with-Text.aux
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: Label `problem@cref' multiply defined.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: ) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+INFO:pdfexport:latexmk: (./02-Working-with-Text.out) (./02-Working-with-Text.out)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/translations/translations-basic-d
+INFO:pdfexport:latexmk: ictionary-english.trsl)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-ppl.cfg)
+INFO:pdfexport:latexmk: ABD: EveryShipout initializing macros
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: Very small head height detected!
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                Using scrlayer-scrpage the head height
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                should be at least \baselineskip, which is
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                12.0pt currently.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                But head height is currently 0.0pt only.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                You may use
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                geometry option `head=12.0pt'
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                to avoid this warning.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: *geometry* driver: auto-detecting
+INFO:pdfexport:latexmk: *geometry* detected driver: xetex
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ppl.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omszplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxzplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1zplm.fd)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: No \author given.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (./02-Working-with-Text.toc
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd))
+INFO:pdfexport:latexmk: (./02-Working-with-Text.lof) (./02-Working-with-Text.lot)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Class scrartcl Warning: \float@listhead detected!
+INFO:pdfexport:latexmk: (scrartcl)              Implementation of \float@listhead became
+INFO:pdfexport:latexmk: (scrartcl)              deprecated in KOMA-Script v3.01 2008/11/14 and
+INFO:pdfexport:latexmk: (scrartcl)              has been replaced by several more flexible
+INFO:pdfexport:latexmk: (scrartcl)              features of package `tocbasic`.
+INFO:pdfexport:latexmk: (scrartcl)              Maybe implementation of \float@listhead will
+INFO:pdfexport:latexmk: (scrartcl)              be removed from KOMA-Script soon.
+INFO:pdfexport:latexmk: (scrartcl)              Loading of package `scrhack' may help to
+INFO:pdfexport:latexmk: (scrartcl)              avoid this warning, if you are using a
+INFO:pdfexport:latexmk: (scrartcl)              a package that still implements the
+INFO:pdfexport:latexmk: (scrartcl)              deprecated \float@listhead interface  on input line 396
+INFO:pdfexport:latexmk: .
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (./02-Working-with-Text.frm)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package scrlayer-scrpage Warning: \headheight to low.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                At least 12.0pt needed,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                but only 0.0pt found.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll enlarge \headheight, for further
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                processing, but you should do this yourself,
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                e.g., setting geometry's option
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                `head=12.0pt'.
+INFO:pdfexport:latexmk: (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
+INFO:pdfexport:latexmk: 00.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Overfull \vbox (12.0pt too high) has occurred while \output is active
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/se-ascii-print.def)
+INFO:pdfexport:latexmk: [1] (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty)
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmtt.fd) [2] [3]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package hyperref Warning: Difference (2) between bookmark levels is greater
+INFO:pdfexport:latexmk: (hyperref)                than one, level fixed on input line 532.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ppl.fd) [4] [5]
+INFO:pdfexport:latexmk: [6] [7]
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 When building the vocabulary ignore terms that have a document
+INFO:pdfexport:latexmk: frequency strictly
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 lower than the given threshold. This value is also     called c
+INFO:pdfexport:latexmk: ut-off in the
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Underfull \hbox (badness 10000) in paragraph at lines 852--853
+INFO:pdfexport:latexmk: \T1/cmtt/m/n/10 literature.     If float, the parameter represents a proportion
+INFO:pdfexport:latexmk: of documents, integer
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last box will be empty
+INFO:pdfexport:latexmk: (mdframed)                you have to change it manually
+INFO:pdfexport:latexmk: (mdframed)                by changing the text, the space
+INFO:pdfexport:latexmk: (mdframed)                or something else on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [8]
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: Package mdframed Warning: You got a bad break
+INFO:pdfexport:latexmk: (mdframed)                because the last split box is empty
+INFO:pdfexport:latexmk: (mdframed)                You have to change the settings on input line 858.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: [9] [10] [11] [12] <use  "02-Working-with-Text_files/output_75_1.png" >
+INFO:pdfexport:latexmk: [13] (./02-Working-with-Text.aux)
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: LaTeX Warning: There were multiply-defined labels.
+INFO:pdfexport:latexmk: 
+INFO:pdfexport:latexmk: )
+INFO:pdfexport:latexmk: (see the transcript file for additional information)
+INFO:pdfexport:latexmk: Output written on 02-Working-with-Text.pdf (13 pages).
+INFO:pdfexport:latexmk: Transcript written on 02-Working-with-Text.log.
+INFO:pdfexport:latexmk: Latexmk: Log file says output to '02-Working-with-Text.pdf'
+INFO:pdfexport:latexmk: Latexmk: List of undefined refs and citations:
+INFO:pdfexport:latexmk: Label `problem' multiply defined
+INFO:pdfexport:latexmk: Label `problem@cref' multiply defined
+INFO:pdfexport:latexmk: Latexmk: Summary of warnings:
+INFO:pdfexport:latexmk: Latex found 2 multiply defined reference(s)
+INFO:pdfexport:latexmk: Latexmk: All targets (02-Working-with-Text.pdf) are up-to-date
+INFO:pdfexport:pdf conversion complete
+INFO:main:process finished successfully

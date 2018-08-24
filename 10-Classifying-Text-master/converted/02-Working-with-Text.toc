@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Incorporating Textual Features}{2}{section.1}
+\contentsline {subsubsection}{\numberline {1.0.1}Problem}{4}{subsubsection.1.0.1}
+\contentsline {subsubsection}{\numberline {1.0.2}Tokenizing Text}{4}{subsubsection.1.0.2}
+\contentsline {subsubsection}{\numberline {1.0.3}Using the essay as features}{7}{subsubsection.1.0.3}
+\contentsline {subsubsection}{\numberline {1.0.4}\texttt {min\_df}}{8}{subsubsection.1.0.4}
+\contentsline {subsubsection}{\numberline {1.0.5}Stop Words}{9}{subsubsection.1.0.5}
+\contentsline {subsubsection}{\numberline {1.0.6}tf-idf}{10}{subsubsection.1.0.6}
+\contentsline {subsubsection}{\numberline {1.0.7}Problem}{11}{subsubsection.1.0.7}
+\contentsline {subsubsection}{\numberline {1.0.8}n-Grams}{11}{subsubsection.1.0.8}
