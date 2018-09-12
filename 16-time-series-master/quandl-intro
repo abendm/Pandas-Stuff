@@ -1,0 +1,915 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"http://imgur.com/1ZcRyrc.png\" style=\"float: left; margin: 20px; height: 55px\">\n",
+    "\n",
+    "# Working With Time Series Data\n",
+    "\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Learning Objectives\n",
+    " \n",
+    "**After this lesson, you will be able to:**\n",
+    "- Identify time series data.\n",
+    "- Explain the challenges of working with time series data.\n",
+    "- Use the `datetime` library to represent dates as objects.\n",
+    "- Preprocess time series data with Pandas.\n",
+    "\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h2><a id=\"A\">What is a Time Series?</a></h2>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A **time series** is a series of data points that's indexed (or listed, or graphed) in time order. Most commonly, a time series is a sequence that's taken at successive equally spaced points in time. Time series are often represented as a set of observations that have a time-bound relation, which is represented as an index.\n",
+    "\n",
+    "Time series are commonly found in sales, analysis, stock market trends, economic phenomena, and social science problems.\n",
+    "\n",
+    "These data sets are often investigated to evaluate the long-term trends, forecast the future, or perform some other form of analysis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Let's take a look at some Apple stock data to get a feel for what time series data look like."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "from datetime import timedelta\n",
+    "%matplotlib inline\n",
+    "\n",
+    "aapl = pd.read_csv(\"data/aapl.csv\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Take a high-level look at the data. What are we looking at?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.describe()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h2><a id=\"B\">The DateTime library</a></h2>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As time is important to time series data, we will need to interpret these data in the ways that humans interpret them (which is many ways). \n",
+    "\n",
+    "Python's `DateTime` library is great for dealing with time-related data, and Pandas has incorporated this library into its own `datetime` series and objects.\n",
+    "\n",
+    "In this lesson, we'll review these data types and learn a little more about each of them:\n",
+    "\n",
+    "* `datetime` objects.\n",
+    "* `datetime` series.\n",
+    "* Timestamps.\n",
+    "* `timedelta()`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### `datetime` Objects"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Below, we'll load in the `DateTime` library, which we can use to create a `datetime` object by entering in the different components of the date as arguments."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# The datetime library is something you should already have from Anaconda.\n",
+    "from datetime import datetime"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Let's just set a random datetime — not the end of the world or anything.\n",
+    "lesson_date = datetime(2012, 12, 21, 12, 21, 12, 844089)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The components of the date are accessible via the object's attributes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Micro-Second\", lesson_date.microsecond)\n",
+    "print(\"Second\", lesson_date.second)\n",
+    "print(\"Minute\", lesson_date.minute)\n",
+    "print(\"Hour\", lesson_date.hour)\n",
+    "print(\"Day\", lesson_date.day)\n",
+    "print(\"Month\",lesson_date.month)\n",
+    "print(\"Year\", lesson_date.year)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### `timedelta()`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Suppose we want to add time to or subtract time from a date. Maybe we're using time as an index and want to get everything that happened a week before a specific observation.\n",
+    "\n",
+    "We can use a `timedelta` object to shift a `datetime` object. Here's an example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import timedelta() from the DateTime library.\n",
+    "from datetime import timedelta\n",
+    "\n",
+    "# Timedeltas represent time as an amount rather than as a fixed position.\n",
+    "offset = timedelta(days=1, seconds=20)\n",
+    "\n",
+    "# The timedelta() has attributes that allow us to extract values from it.\n",
+    "print('offset days', offset.days)\n",
+    "print('offset seconds', offset.seconds)\n",
+    "print('offset microseconds', offset.microseconds)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "`datetime`'s `.now()` function will give you the `datetime` object of this very moment."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "now = datetime.now()\n",
+    "print(\"Like Right Now: \", now)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The current time is particularly useful when using `timedelta()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Future: \", now + offset)\n",
+    "print(\"Past: \", now - offset)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*Note: The largest value a `timedelta()` can hold is days. For instance, you can't say you want your offset to be two years, 44 days, and 12 hours; you have to convert those years to days.*"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "You can read more about the `timedelta()` category [here](https://docs.python.org/2/library/datetime.html)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Guided Practice: Apple Stock Data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can practice using `datetime` functions and objects using Apple stock data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The `Date` column starts off as an object."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.dtypes"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h2><a id=\"C\">Preprocessing Time Series Data with Pandas</a><h2>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Convert time data to a `datetime` object."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Overwrite the original `Date` column with one that's been converted to a `datetime` series."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl['Date'] = pd.to_datetime(aapl.Date)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can see these changes reflected in the `Date` column structure."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can also see that the `Date` object has changed. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.dtypes"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### The `.dt` Attribute"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Pandas' `datetime` columns have a `.dt` attribute that allows you to access attributes that are specific to dates. For example:\n",
+    "\n",
+    "    aapl.Date.dt.day\n",
+    "    aapl.Date.dt.month\n",
+    "    aapl.Date.dt.year\n",
+    "    aapl.Date.dt.weekday_name\n",
+    "\n",
+    "And, there are many more!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.Date.dt.weekday_name.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.Date.dt.dayofyear.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl['month'] = aapl.Date.dt.month"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check out the Pandas `.dt` [documentation](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.dt.html) for more information."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Timestamps"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Timestamps are useful objects for comparisons. You can create a timestamp object using the `pd.to_datetime()` function and a string specifying the date. These objects are especially helpful when you need to perform logical filtering with dates."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.to_datetime('1/1/2017')\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The main difference between a `datetime` object and a timestamp is that timestamps can be used as comparisons."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's use the timestamp `ts` as a comparison with our Apple stock data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.loc[aapl.Date >= ts, :].head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can even get the first and last dates from a time series."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.Date.max() - aapl.Date.min()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "> **Check for Understanding:** Why do we convert the DataFrame column containing the time information into a `datetime` object?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "### Set `datetime` to Index the DataFrame"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "After converting the column containing time data from object to `datetime`, it is also useful to make the index of the DataFrame a `datetime`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's set the `Date` column as the index."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.set_index('Date', inplace=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Filtering by Date with Pandas"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "It is easy to filter by date using Pandas. Let's create a subset of data containing only the stock prices from 2017. We can specify the index as a string constant. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "aapl['2017']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "There are a few things to note about indexing with time series. Unlike numeric indexing, the end index will be included. If you want to index with a range, the time indices must be sorted first.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "> **Recap:** The steps for preprocessing time series data are to:\n",
+    "* Convert time data to a `datetime` object.\n",
+    "* Set `datetime` to index the DataFrame."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Recap"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "* We use time series analysis to identify changes in values over time.\n",
+    "* The `datetime` library makes working with time data more convenient.\n",
+    "* To preprocess time series data with Pandas, you:\n",
+    "    1. Convert the time column to a `datetime` object.\n",
+    "    2. Set the time column as the index of the DataFrame."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h2><a id=\"D\">Independent Practice</a></h2>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Instructor Note**: These are optional and can be assigned as student practice questions outside of class."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1) Create a `datetime` object representing today's date."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick = pd.read_csv('data/ks-projects.csv.zip', compression='zip', encoding='Windows-1252')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.columns = ['id', 'name', 'category', 'main_category', 'currency', 'deadline', 'goal', 'launched', 'pledged', 'state',\n",
+    "               'backers', 'country', 'usd_pledged', 'unm_1', 'unm_2', 'unm_3', 'unm_4']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.launched.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick['launched'] = pd.to_datetime(kick.launched, errors='coerce')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick['launch_month'] = kick.launched.dt.month"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### PROBLEM\n",
+    "\n",
+    "Consider what other ways to use the dates to create new features.  Generate as many as you can think of and examine them in terms of our earlier feature selection methods.  Finally, compare the performance of five different classifiers using the selected features."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick['deadline'] = pd.to_datetime(kick.deadline, errors = 'coerce')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.loc[:, 'launch_day'] = kick.launched.dt.weekday_name\n",
+    "kick.loc[:, 'dead_week'] = kick.deadline.dt.weekday_name\n",
+    "kick.loc[:, 'launch_day_of_month'] = kick.launched.dt.day\n",
+    "kick.loc[:, 'dead_day'] = kick.deadline.dt.day\n",
+    "kick.loc[:, 'launch_weekend'] = (kick.launched.dt.day == 5)|(kick.launched.dt.day == 6)\n",
+    "kick.loc[:, 'dead_weekend'] = (kick.deadline.dt.day == 5)|(kick.deadline.dt.day == 6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.loc[:, 'length'] = kick.deadline - kick.launched"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn.feature_selection import RFE, SelectFromModel, SelectPercentile"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn.ensemble import RandomForestClassifier"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dums = pd.get_dummies(kick.main_category, drop_first=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dums.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick.launch_week.describe()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "day_dum = pd.get_dummies(kick.launch_week, drop_first=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick_nums.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kick_nums = pd.concat([dums, day_dum, kick[['length']]], axis = 1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "KeyboardInterrupt",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-89-f9fc27d908c1>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mother\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_dummies\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkick\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcolumns\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'launch_week'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'length'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'main_category'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'launch_weekend'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mdrop_first\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/anaconda3/lib/python3.6/site-packages/pandas/core/reshape/reshape.py\u001b[0m in \u001b[0;36mget_dummies\u001b[0;34m(data, prefix, prefix_sep, dummy_na, columns, sparse, drop_first)\u001b[0m\n\u001b[1;32m   1210\u001b[0m                                     drop_first=drop_first)\n\u001b[1;32m   1211\u001b[0m             \u001b[0mwith_dummies\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdummy\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1212\u001b[0;31m         \u001b[0mresult\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mconcat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mwith_dummies\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0maxis\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1213\u001b[0m     \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1214\u001b[0m         result = _get_dummies_1d(data, prefix, prefix_sep, dummy_na,\n",
+      "\u001b[0;32m/anaconda3/lib/python3.6/site-packages/pandas/core/reshape/concat.py\u001b[0m in \u001b[0;36mconcat\u001b[0;34m(objs, axis, join, join_axes, ignore_index, keys, levels, names, verify_integrity, copy)\u001b[0m\n\u001b[1;32m    211\u001b[0m                        \u001b[0mverify_integrity\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mverify_integrity\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    212\u001b[0m                        copy=copy)\n\u001b[0;32m--> 213\u001b[0;31m     \u001b[0;32mreturn\u001b[0m \u001b[0mop\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_result\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    214\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    215\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/anaconda3/lib/python3.6/site-packages/pandas/core/reshape/concat.py\u001b[0m in \u001b[0;36mget_result\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m    406\u001b[0m             new_data = concatenate_block_managers(\n\u001b[1;32m    407\u001b[0m                 \u001b[0mmgrs_indexers\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mnew_axes\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mconcat_axis\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0maxis\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 408\u001b[0;31m                 copy=self.copy)\n\u001b[0m\u001b[1;32m    409\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    410\u001b[0m                 \u001b[0mnew_data\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_consolidate_inplace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/anaconda3/lib/python3.6/site-packages/pandas/core/internals.py\u001b[0m in \u001b[0;36mconcatenate_block_managers\u001b[0;34m(mgrs_indexers, axes, concat_axis, copy)\u001b[0m\n\u001b[1;32m   5192\u001b[0m             \u001b[0mvalues\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mb\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mvalues\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5193\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 5194\u001b[0;31m                 \u001b[0mvalues\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mvalues\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   5195\u001b[0m             \u001b[0;32melif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5196\u001b[0m                 \u001b[0mvalues\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mvalues\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mview\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "other = pd.get_dummies(kick, columns=['launch_week', 'length', 'main_category', 'launch_weekend'], drop_first = True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "other.isna().sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "test = kick_nums.dropna()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
