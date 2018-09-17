@@ -1,0 +1,22 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title> Titanic Survivor-O-Matic </title>
+  </head>
+   <body>
+    <div>
+      <h3>Please Enter Your Passenger Info</h3>
+    <div class = 'card' style="width: 18rem;">
+      <form action = "http://localhost:4000/result" method = "POST">
+         <p>Class <input type = "int" name = "pclass" /></p>
+         <p>Sex <input type = "int" name = "sex" /></p>
+         <p>Age <input type = "int" name = "age" /></p>
+         <p>Fare <input type ="int" name = "fare" /></p>
+         <p># of siblings <input type ="int" name = "sibsp" /></p>
+
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+    </div>
+  </div>
+   </body>
+</html>
