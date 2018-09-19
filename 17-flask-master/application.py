@@ -7,34 +7,19 @@ import pickle
 with open('titanic_rfc.pkl', 'rb') as picklefile:
     PREDICTOR = pickle.load(picklefile)
 
-    
+
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-df = pd.read_csv('data/spam.txt', sep='\t', header=None)
-df.columns = ['target', 'msg']
-y = df['target']
-X = df['msg']
 
-# Tfidf, filter stop words, 300 features
-cvec = TfidfVectorizer(stop_words='english', max_features = 300)
-X = cvec.fit_transform(X)
-clf = MultinomialNB()
-clf.fit(X, y)
+
 
 
 
 #-------- ROUTES GO HERE -----------#
 
-@app.route('/is_spam', method=["GET"])
-def is_spam():
-    msg = pd.Series(flask.request.args['msg'])
-    X_new = cvec.transform(msg)
-    score = clf.predict(X_new)
-    results = {'prediction': score[0]}
-    return flask.jsonify(results)
 
 @app.route('/predict', methods=["GET"])
 def predict():
@@ -45,7 +30,7 @@ def predict():
     sibsp = flask.request.args['sibsp']
 
     item = np.array([pclass, sex, age, fare, sibsp]).reshape(-1,5)
-   
+
     score = PREDICTOR.predict_proba(item)
     results = {'survival chances': score[0,1], 'death chances': score[0,0]}
     return flask.jsonify(results)
@@ -74,14 +59,6 @@ def result():
        results = {'survival chances': score[0,1], 'death chances': score[0,0]}
        return flask.jsonify(results)
 
-
-# @app.route('/is_spam', methods=["GET"])
-# def is_spam():
-#     msg = pd.Series(flask.request.args['msg'])
-#     X_new = cvec.transform(msg)
-#     score = clf.predict(X_new)
-#     results = {'prediction': score[0]}
-#     return flask.jsonify(results)
 
 
 if __name__ == '__main__':
